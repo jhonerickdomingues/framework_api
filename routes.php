@@ -1,5 +1,7 @@
 <?php
-Router::get("/")->query('SELECT * FROM artigos INNER JOIN autores ON autores.id_autor = artigos.autor_artigo;');
+Router::get('/')->query('SELECT * FROM produtos');
+
+//Router::get("/")->query('SELECT * FROM artigos INNER JOIN autores ON autores.id_autor = artigos.autor_artigo;');
 Router::get("/produtos")->query('SELECT * FROM artigos');
 Router::get("/produtos/:id")->query('SELECT * FROM produtos WHERE id = :id');
 Router::put("/produtos/editar/:id")->query('UPDATE produtos SET ::put WHERE id = :id');
